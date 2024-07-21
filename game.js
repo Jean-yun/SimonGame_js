@@ -90,7 +90,12 @@ function checkAnswer(currentLevel) {
 	setTimeout(function() {$("body").removeClass("game-over")}, 200)
 	playSound("wrong")
 	$("#level-title").text("Game Over, Press Any Key to Restart")
-	started = false
-	level = 0
+	restart()
 	}
+}
+
+function restart() {
+	level = 0
+	gamePattern = []
+	started = false
 }
